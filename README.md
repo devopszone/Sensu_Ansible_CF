@@ -1,6 +1,6 @@
 # Sensu_Ansible_CF
-This repository contains the cloud formation template to install and configure Sensu server components, Sensu client , plugins and checks for system and  Cloud.
-Sensu-Server and it's dependencies on RHEL in AWS
+This repository contains the Cloud Formation template and Ansible role and Shell script to install and configure Sensu server components Sensu client , plugins and checks for system and  Cloud on RHEL 7.
+
 This Cloud Formation template allows you to deploy an instance of Sensu-server and it's components like (sensu-api,sensu-client,uchiwa and Redis)on a Linux RHEL 7 VM. This will Template deploy Ec2 instance in AWS Oregon Region by using default VPC and default security groups. The Sensu-server is configured with system level checks,container checks, redis checks and cloud checks. 
 
 # I. Deploy Sensu-server VM using AWS Cloud Formation
@@ -18,7 +18,9 @@ Access Uchiwa dashboard at http://<ipaddress>:8080
 
 If You have already Running VM with ansible Configured, then clone this Git Repo and execute command like
 > ansible-playbook setup.yml -i inventoryfile -----for sensu-server and client.
+
 > ansible-playbook setup_client.yml -i inventoryfile ---for sensu-client only.
+
 Access Uchiwa dashboard at http://<ipaddress>:8080
    
 # III. Deploy Sensu-server/client VM using Shell Script.
