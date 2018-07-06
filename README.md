@@ -6,7 +6,7 @@ This Cloud Formation template allows you to deploy an instance of Sensu-server a
 # I. Deploy Sensu-server VM using AWS Cloud Formation
    If you have AWS subscription already Configure AWS-Cli on you local machine then execute the below command on terminal.
 
- > aws cloudformation deploy --template /path/of/template/file/cf_sensu.json --stack-name stackname --parameter-overrides SSHKey=  sshkey_pair_name Sit back and relax. 
+ > aws cloudformation deploy --template /path/of/template/file/cf_sensu.json --stack-name stackname --parameter-overrides SSHKey=  sshkey_pair_name
 
 In above Command provide the path for template(cf_sensu.json) and provide SSH keypair name which is already available in your region.
   
@@ -27,6 +27,6 @@ Access Uchiwa dashboard at http://<ipaddress>:8080
 
 If You have fresh VM then execute the below command 
 
-> curl https://raw.githubusercontent.com/devopszone/sensu_install/master/install_sensu.sh | bash -s
+> curl https://raw.githubusercontent.com/sravankumar-n/sensu_install/master/install_sensu.sh | bash -s
 
 Access Uchiwa dashboard at http://<ipaddress>:8080
